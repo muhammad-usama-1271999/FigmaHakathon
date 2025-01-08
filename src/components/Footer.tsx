@@ -3,7 +3,7 @@ import clockIcon from "@/icons/ClockClockwise.png"
 import image7 from "@/icons/image7.png"
 import image6 from "@/icons/image6.png"
 import image13 from "@/icons/image13.png"
-import image19 from "@/icons/image19.png"
+// import image19 from "@/icons/image19.png"
 import image25 from "@/icons/image25.png"
 import image26 from "@/icons/image26.png"
 import image27 from "@/icons/image27.png"
@@ -19,7 +19,7 @@ export default function Footer () {
           <div className="xl:flex justify-around sm:grid place-content-center xl:mt-24 border-b-2 sm:border-[#ffffff] xl:border-[#FF9F0D] sm:pb-12 xl:pb-24 ">
             <div className="xl:mt-24">
                 <h4 className=" font-[helvetica] font-bold text-[#FF9F0D] xl:text-[32px] sm:text-2xl sm:pt-12 xl:pt-0 ">Still You Need Our Support ?</h4>
-                <p className="font-[inter] text-[16px] text-[#ffffff]">Don't wait make a smart & logical quote here. Its pretty easy.</p>
+                <p className="font-[inter] text-[16px] text-[#ffffff]">Dont wait make a smart & logical quote here. Its pretty easy.</p>
             </div>
             <div className="xl:mt-24 sm:mt-12 h-[56px]">
               <input type="input" className="relative mx-auto h-[56px] rounded-[3px] font-[inter] text-[22px] bg-[#FF9F0D]" placeholder="   Enter Your Email" />

@@ -46,8 +46,7 @@ import feedbackImage from "../icons/feedbackImage.png"
 import silverStar from "../icons/silverStar.png"
 import star from "../icons/star.png"
 import quotes from "../icons/Quotes.png"
-import ninePortionBackground from "../icons/ninePortionBackground.png"
-import youtubeIcon from "../icons/youtubeIcon.png"
+// import ninePortionBackground from "../icons/ninePortionBackground.png"
 import pizza from "../icons/pizza.png"
 import thumbsUp from "../icons/ThumbsUp.png"
 import chat from "../icons/ChatDots.png"
@@ -119,7 +118,7 @@ export default function Home() {
               {/* left lorem side start */}
               <div className="w-[482px] mt-24 ">
                 <div className="text-[#ff9f0d] lg:text-3xl text-xl">
-                  It's Quick & Amusing!
+                  Its Quick & Amusing!
                 </div>
                 <h1 className="font-[helvetica] font-bold lg:text-6xl text-3xl text-[#ff9f0d] mt-3">
                   Th<span className="text-[#ffffff]">e Art of Speed Food Quality</span>
