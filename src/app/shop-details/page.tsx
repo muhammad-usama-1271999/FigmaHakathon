@@ -23,7 +23,7 @@ export default function shopDetails (){
     return(
         <div>
             <Header />
-             <div className="px-5 grid place-content-center -mt-96">
+             <div className="px-5 grid place-content-center">
                 <div className=" gap-7 ">
                     <div className="xl:flex justify-center xl:gap-10 mx-auto">
                         <div className="xl:hidden grid place-content-center">

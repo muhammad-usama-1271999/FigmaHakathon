@@ -6,7 +6,7 @@ export default function pages () {
     return(
         <div className="">
             <Header />
-            <div className="grid place-content-center -mt-80 mx-10">
+            <div className="grid place-content-center mx-10">
                 <h2 className="font-[helvetica] font-bold text-black lg:text-5xl sm:text-3xl mx-auto">Questions Looks Here</h2>
                 <p className="text-lg text-slate-800 mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
                 <div className="grid lg:grid-cols-2 mt-10 mx-auto">

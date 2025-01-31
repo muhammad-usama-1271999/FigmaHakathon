@@ -25,7 +25,7 @@ export default function about () {
     return(
             <div className="bg-[#CDCDCD40]">
                 <Header />
-                    <div className="grid gird-content-center mx-auto -mt-80 ">
+                    <div className="grid gird-content-center mx-auto">
                         {/* first portion starts here */}
                         <div className="xl:flex justify-center mx-auto xl:mx-72 gap-24">
                             <div className="flex justify-center  ">

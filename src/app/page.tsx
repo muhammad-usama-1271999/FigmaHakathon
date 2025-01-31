@@ -51,6 +51,7 @@ import pizza from "../icons/pizza.png"
 import thumbsUp from "../icons/ThumbsUp.png"
 import chat from "../icons/ChatDots.png"
 import share from "../icons/ShareNetwork.png"
+import Link from "next/link";
 
 
 
@@ -63,7 +64,7 @@ export default function Home() {
         {/*  first portion started here hero section */}
         <div className="">
           {/* navbar start */}
-          <div className="flex justify-between px-20 bg-black">
+          <div className="lg:flex justify-between lg:px-20 bg-black">
             {/* list item start */}
             <div className="">
                 <ul className="xl:flex gap-5 mt-8 hidden">
@@ -78,12 +79,13 @@ export default function Home() {
             </div>
             {/* list item end */}
 
-            <div className=" text-[#FF9F0D] text-5xl font-bold ">
+           
+            <div className=" text-[#FF9F0D] text-5xl font-bold  text-center">
               Fo<span className="text-[#ffffff]">odTuck</span>
             </div>
 
             {/* search portion start*/}
-            <div className="flex mt-8">
+            <div className="flex justify-between lg:mt-8 px-3 lg:px-0 ">
               <div className="w-[310px] hidden h-[44px] border border-[#FF9F0D] rounded-[27px] xl:flex justify-around pt-2 gap-9">
                 <div className=" text-white text-base leading-[24px] font-normal ">
                   Search....
@@ -93,13 +95,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="">
-                <button className="hover:bg-white"> <a href="./shopping-cart"><Image src={bag} alt="handbag" className=" w-[40px] h-[25px] m-2"/></a></button>
+                <button className=""> <a href="./shopping-cart"><Image src={bag} alt="handbag" className=" w-[40px] h-[25px] m-2"/></a></button>
               </div>
               <div className="xl:hidden text-4xl text-white">&#8801;</div>
             </div>
+           
           </div>
           {/* navbar end */}
-          <div className="lg:flex justify-center mt-24 gap-10 mx-10">
+          <div className="lg:flex justify-center lg:mt-24 mt-5 gap-10 mx-10">
             <div className="flex gap-10">
               {/* start icons line */}
               <div className="">
@@ -116,25 +119,32 @@ export default function Home() {
               </div>
               {/* ends icons line */}
               {/* left lorem side start */}
-              <div className="w-[482px] mt-24 ">
+              <div className="w-[482px] lg:mt-24 ">
                 <div className="text-[#ff9f0d] lg:text-3xl text-xl">
                   Its Quick & Amusing!
                 </div>
                 <h1 className="font-[helvetica] font-bold lg:text-6xl text-3xl text-[#ff9f0d] mt-3">
                   Th<span className="text-[#ffffff]">e Art of Speed Food Quality</span>
                 </h1>
-                <div className="text-base text-white mt-7">
+                <div className="lg:hidden ">
+              <Image src={heroImage} alt="" className="xl:w-[877px] w-[577px] xl:h-[670px]" />
+            </div>
+                <div className="lg:text-base text-sm text-white mt-7">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
                 </div>
-                <button className="text-white text-base py-4 px-12 rounded-[30px] bg-[#ff9f0d] mt-10 hover:bg-yellow-500">
-                    See Menu
-                </button>
+                
+                <div className="mt-12">
+                <Link href={"./menu"} className="text-white lg:text-base text-sm lg:py-4 py-2 lg:px-12 px-6  rounded-[30px] bg-[#ff9f0d] hover:bg-yellow-500 cursor-pointer">
+                   See Menu
+                </Link>
+                </div>
+                
               </div>
             </div>
             {/* left lorem side end */}
       
             {/* right hero picture side start */}
-            <div className="">
+            <div className="hidden lg:grid">
               <Image src={heroImage} alt="" className="xl:w-[877px] w-[577px] xl:h-[670px]" />
             </div>
             {/* right hero picture side end  */}
@@ -143,32 +153,32 @@ export default function Home() {
         {/*first portion completed hero section*/}
 
     {/* second portion stared here about us*/}
-    <div className="flex justify-center gap-20  mx-10 mt-40">
-      <div className="w-[600px] ">
+    <div className="flex justify-center gap-20  mx-10 lg:mt-40 mt-20">
+      <div className="md:w-[600px] ">
         <h1 className="text-[#FF9F0D] font-helvetica font-bold lg:text-3xl text-xl">ABOUT US</h1>
         <h2 className="text-[#FF9F0D] font-helvetica font-bold lg:text-6xl text-3xl mt-5">We 
           <span className="text-[#ffffff]"> Create the best foody product</span></h2>
         <div className="lg:hidden">
-          <Image src={boilEgg} alt="boilEgg with chapati" className="w-[460px] h-[230px] mb-5 rounded-md"/>
+          <Image src={boilEgg} alt="boilEgg with chapati" className="md:w-[460px] h-[230px] mb-5 rounded-md"/>
           <div className="flex gap-3">
-            <Image src={foodWithSauce} alt="some foods with sauce" className="w-[230px] h-[182px] rounded-md"/>
-            <Image src={sandwich} alt="sandwich" className="w-[230px] h-[182px] rounded-md"/>
+            <Image src={foodWithSauce} alt="some foods with sauce" className="md:w-[230px] w-[110px] h-[182px] rounded-md"/>
+            <Image src={sandwich} alt="sandwich" className="md:w-[230px] h-[182px] rounded-md"/>
           </div>
         </div>
-        <p className="text-[#ffffff] font-inter font-bold text-base mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
+        <p className="text-[#ffffff] font-inter font-bold text-xs lg:text-base mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
         <div className="flex gap-5 mt-10">
-          <Image src={checkIcon} alt="checkIcon" className="" />
-          <p className="text-[#ffffff]"> Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
+          <Image src={checkIcon} alt="checkIcon" className="h-3 lg:h-10" />
+          <p className="text-[#ffffff] text-xs lg:text-base"> Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
         </div>
         <div className="flex gap-5 mt-10">
-          <Image src={checkIcon} alt="checkIcon" className="" />
-          <p className="text-[#ffffff]"> Quisque diam pellentesque bibendum non dui volutpat fringilla </p>
+          <Image src={checkIcon} alt="checkIcon" className="h-3 lg:h-10" />
+          <p className="text-[#ffffff] text-xs lg:text-base"> Quisque diam pellentesque bibendum non dui volutpat fringilla </p>
         </div>
         <div className="flex gap-5 mt-10">
-          <Image src={checkIcon} alt="checkIcon" className="" />
-          <p className="text-[#ffffff]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <Image src={checkIcon} alt="checkIcon" className="h-3 lg:h-10" />
+          <p className="text-[#ffffff] text-xs lg:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
-        <button className="text-white bg-[#FF9F0D] rounded-[30px] py-5 px-12 mt-10">
+        <button className="text-white text-xs lg;text-base bg-[#FF9F0D] rounded-[30px] lg:py-5 py-2 lg:px-12 px-6 mt-10">
           See Menu
         </button>
       </div>
@@ -184,7 +194,7 @@ export default function Home() {
     {/* second portion end here about us*/}
 
     {/* third portion start here food categary*/}
-    <div className="mt-40">
+    <div className="lg:mt-40 mt-20">
       <h2 className="text-center text-[#FF9F0D] font-[helvetica] lg:text-3xl text-xl"> Food Category</h2>
       <h1 className="text-center text-[#FF9F0D] font-[helvetica] lg:text-5xl text-3xl mt-5">Ch
         <span className="text-[#ffffff]">oose Food Item</span></h1>
@@ -197,19 +207,19 @@ export default function Home() {
 
         {/* third portion images code start  */}
       <div className="flex justify-center flex-wrap gap-5 mt-12">
+        <div className="mb-8 lg:mb-0">
+          <Image src={image1} alt="some food" className="lg:w-[305px] w-[200px] lg:h-[328px] h-[200px] rounded-[6px]"/>
+            <p className="relative text-center text-[#FF9F0D] font-[inter] text-bold lg:text-2xl text-base rounded-[6px] bg-[#ffffff] mx-4  -mt-20">Save 30%</p>
+            <p className="relative text-center text-[#FFffff] font-[inter] text-bold lg:text-2xl text-base rounded-[6px] bg-[#FF9F0D] mx-4 ">Fast Food Dish</p>
+       </div>
         <div>
-          <Image src={image1} alt="some food" className=" w-[305px] h-[328px] rounded-[6px]"/>
-            <p className="relative text-center text-[#FF9F0D] font-[inter] text-bold text-[24px] rounded-[6px] bg-[#ffffff] w-[125px] -mt-20">Save 30%</p>
-            <p className="relative text-center text-[#FFffff] font-[inter] text-bold text-[26px] rounded-[6px] bg-[#FF9F0D] w-[206px]">Fast Food Dish</p>
+          <Image src={image2} alt="some food" className=" lg:w-[305px] w-[200px] lg:h-[328px] h-[200px] rounded-[6px]"/>
         </div>
         <div>
-          <Image src={image2} alt="some food" className=" w-[305px] h-[328px] rounded-[6px]"/>
+          <Image src={image3} alt="some food" className="lg:w-[305px] w-[200px] lg:h-[328px] h-[200px] rounded-[6px]"/>
         </div>
         <div>
-          <Image src={image3} alt="some food" className=" w-[305px] h-[328px] rounded-[6px]"/>
-        </div>
-        <div>
-          <Image src={image4} alt="some food" className=" w-[305px] h-[328px] rounded-[6px]"/>
+          <Image src={image4} alt="some food" className=" lg:w-[305px] w-[200px] lg:h-[328px] h-[200px] rounded-[6px]"/>
         </div>
       </div>
       {/* third portion images code end here */}
@@ -220,7 +230,7 @@ export default function Home() {
     {/* fourth portion start here why choose us */}
     <div className="flex justify-center gap-20 flex-wrap mt-24"> 
       {/*  left side picture portion  */}
-      <div className="">
+      <div className="mx-3 hidden lg:grid">
         <div className="flex items-end gap-3 mb-3">
           <div>
             <Image src={image5} alt="some food" className="w-[362px] h-[356px] rounded-[6px]"/>
@@ -247,43 +257,67 @@ export default function Home() {
         </div>
       </div>
     {/* right side content portion */}
-      <div className="w-[526px]">
+      <div className="lg:w-[526px] w-[300px]">
         <div className="">
-          <h2 className="font-[helvetica] text-[28px] text-[#FF9F0D]">why Choose us</h2>
+          <h2 className="font-[helvetica] lg:text-3xl text-xl text-[#FF9F0D]">why Choose us</h2>
         </div>
         <div className="mt-4">
-          <h1 className="font-[helvetica] font-bold text-5xl text-[#FF9F0D]">Ex
+          <h1 className="font-[helvetica] font-bold lg:text-5xl text-3xl text-[#FF9F0D]">Ex
             <span className=" text-[#FFffff]">tra ordinary taste And Experienced</span> </h1>
         </div>
+        <div className="mx-3 lg:hidden">
+        <div className="flex items-end gap-3 mb-3">
+          <div>
+            <Image src={image5} alt="some food" className="w-[362px] h-[356px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image src={image2} alt="some food" className="w-[281px] h-[231px] rounded-[6px]"/>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <div>
+            <Image src={image7} alt="some food" className="w-[244px] h-[306px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image  src={image8} alt="some food" className="w-[221px] h-[226px] rounded-[6px]"/>
+          </div>
+          <div className="grid gap-3">
+            <div>
+              <Image src={image9} alt="some food" className="w-[161px] h-[168px] rounded"/>
+            </div>
+            <div>
+              <Image src={image10} alt="some food" className="w-[161px] h-[166px] rounded"/>
+            </div>
+          </div>
+        </div>
+      </div>
         <div className="mt-9">
-          <p className="font-[inter] text-[16px] text-[#ffffff]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui
+          <p className="font-[inter] lg:text-base text-xs text-[#ffffff]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui
             volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices 
             mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
         </div>
-        <div className="flex gap-5 mt-6">
-          <div className="rounded-[6px] bg-[#FF9F0D] p-5">
-            <Image src={hamburger} alt="Hamburger" className="w-[56px] h-[56px]" />
+        <div className="flex justify-around mt-6">
+          <div className="">
+            <Image src={hamburger} alt="Hamburger" className="lg:w-[116px] w-[58px] lg:h-[116px] h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-5 p-2" />
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Fast Food</h3>
           </div>
-          <div className="rounded-[6px] bg-[#FF9F0D] p-5">
-            <Image src={cookie} alt="cookie" className="w-[56px] h-[56px]" />
+          <div className="">
+            <Image src={cookie} alt="cookie" className="lg:w-[116px] w-[58px] lg:h-[116px] h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-5 p-2" />
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Lunch</h3>
           </div>
-          <div className="rounded-[6px] bg-[#FF9F0D] p-5">
-            <Image src={wineGlass} alt="wineGlass" className="w-[56px] h-[56px]" />
+          <div className="">
+            <Image src={wineGlass} alt="wineGlass" className="lg:w-[116px] w-[58px] lg:h-[116px] h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-5 p-2" />
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Dinner</h3>
           </div>
-        </div>
-        <div className="flex gap-12">
-          <h3 className=" text-[#ffffff] font-[inter] text-[18px] p-2">Fast Food</h3>
-          <h3 className=" text-[#ffffff] font-[inter] text-[18px] p-2">Lunch</h3>
-          <h3 className=" text-[#ffffff] font-[inter] text-[18px] p-2">Dinner</h3>
         </div>
         <div className="">
-          <div className="flex justify-around w-[374px] border-l-8 border-[#ff9f0d] bg-[#ffffff] rounded-md p-4">
+          <div className="flex justify-around lg:w-[374px] w-[200px] border-l-8 border-[#ff9f0d] bg-[#ffffff] rounded-md p-4 mx-auto">
             <div className="">
-              <h3 className="font-[helvetica] text-[48px] font-bold text-[#FF9F0D]">30+</h3>
+              <h3 className="font-[helvetica] lg:text-5xl text-2xl font-bold text-[#FF9F0D]">30+</h3>
             </div>
             <div className="">
-              <p className="font-[inter] text-[20px] text-[#1E1E1E]">Years of</p>
-              <h5 className=" text-[24px] font-bold text-[#1E1E1E]">Experienced</h5>
+              <p className="font-[inter] lg:text-xl text-sm text-[#1E1E1E]">Years of</p>
+              <h5 className=" lg:text-2xl text-base font-bold text-[#1E1E1E]">Experienced</h5>
             </div>
           </div>
         </div>
@@ -295,26 +329,26 @@ export default function Home() {
     <div className="mt-24">
       <Image src={backgroundImage} alt="backgroundImage" className=" " />
       <div className="relative -mt-40 xl:-mt-72 bg-[#0D0D0DD9] p-4 xl:p-10">
-        <div className="mx-auto flex justify-around ">
+        <div className="mx-auto flex justify-around flex-wrap ">
           <div className="grid place-content-center xl:gap-3 ">
-            <Image src={chefCap} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16" />
-            <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-[24px] text-sm ">Professional Chefs</h5>
-            <h3 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-[48px] text-xl ">420</h3>
+            <Image src={chefCap} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16 mx-auto" />
+            <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-2xl text-sm ">Professional Chefs</h5>
+            <h3 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-5xl text-base text-center ">420</h3>
           </div>
           <div className="grid place-content-center xl:gap-3">
-          <Image src={burgerDrink} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16" />
-          <h5 className="font-[helvetica] font-bold text-[#ffffff] xl:text-[24px] text-sm">Items of food</h5>
-            <h3 className="font-[helvetica] font-bold text-[#ffffff] xl:text-[48px] text-xl ">320</h3>
+          <Image src={burgerDrink} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16 mx-auto" />
+          <h5 className="font-[helvetica] font-bold text-[#ffffff] xl:text-2xl text-sm">Items of food</h5>
+            <h3 className="font-[helvetica] font-bold text-[#ffffff] xl:text-5xl text-base text-center ">320</h3>
           </div>
           <div className="grid place-content-center xl:gap-3">
-          <Image src={spoon} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16" />
-          <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-[24px] text-sm">Years Of Experienced</h5>
-            <h3 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-[48px] text-xl ">30+</h3>
+          <Image src={spoon} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16 mx-auto" />
+          <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-2xl text-sm">Years Of Experienced</h5>
+            <h3 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-5xl text-base text-center ">30+</h3>
           </div>
           <div className="grid place-content-center xl:gap-3">
-          <Image src={pizzaSlice} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16" />
-          <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-[24px] text-sm">Happy Customers</h5>
-            <h3 className="font-[helvetica] font-bold text-[#ffffff] xl:text-[48px] text-xl">220</h3>
+          <Image src={pizzaSlice} alt="chefCap" className=" xl:w-[120px] w-16 xl:h-[120px] h-16 mx-auto" />
+          <h5 className=" font-[helvetica] font-bold text-[#ffffff] xl:text-2xl text-sm">Happy Customers</h5>
+            <h3 className="font-[helvetica] font-bold text-[#ffffff] xl:text-5xl text-base text-center">220</h3>
           </div>
         </div>
       </div>
@@ -322,20 +356,20 @@ export default function Home() {
     {/* fivth portion completed counting dishes, chef and experience*/}
 
     {/* sixth portion start menu here */}
-    <div className="mt-32">
+    <div className="lg:mt-32 mt-20">
       <div className="mx-auto">
-        <p className="font-[helvetica] text-[26px] text-[#FF9F0D] text-center">Choose & pick</p>
-        <h3 className="font-[helvetica] font-bold text-[48px] text-[#FF9F0D] text-center">Fr
+        <p className="font-[helvetica] text-base lg:text-2xl text-[#FF9F0D] text-center">Choose & pick</p>
+        <h3 className="font-[helvetica] font-bold text-3xl lg:text-5xl text-[#FF9F0D] text-center">Fr
           <span className=" text-[#FFffff]">om Our Menu</span></h3>
         <div className="mt-14">
-          <ul className="flex justify-center lg:gap-16 gap-10">
-            <li className="font-[inter] text-[20px] text-[#ffffff] hover:text-[#FF9F0D]">Breakfast</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Lunch</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Dinner</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Dessert</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Drink</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Snack</li>
-            <li className="font-[inter] text-[20px] text-[#FFffff] hover:text-[#FF9F0D]">Suops</li>
+          <ul className="flex justify-center flex-wrap lg:gap-16 gap-10">
+            <li className="font-[inter] lg:text-xl text-sm text-[#ffffff] hover:text-[#FF9F0D]">Breakfast</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Lunch</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Dinner</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Dessert</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Drink</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Snack</li>
+            <li className="font-[inter] lg:text-xl text-sm text-[#FFffff] hover:text-[#FF9F0D]">Suops</li>
           </ul>
         </div>
       </div>
@@ -348,15 +382,15 @@ export default function Home() {
             <Image src={image11} alt="some food" className="w-[366px] h-[362px]" />
           </div>
         </div>
-        <div className=" grid gap-8 grid-cols-2">
+        <div className=" mx-4 ">
           <div className="flex gap-4">
             <div className="">
               <Image src={image12} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Lettuce Leaf</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Lettuce Leaf</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -364,9 +398,9 @@ export default function Home() {
               <Image src={image8} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Glow Cheese</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Glow Cheese</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -374,9 +408,9 @@ export default function Home() {
               <Image src={image14} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Fresh Breakfast</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">14.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Fresh Breakfast</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">14.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -384,9 +418,9 @@ export default function Home() {
               <Image src={image15} alt="some food" className=" w-[80px] h-[79px] rounded-[6px] rotate-90" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Italian Pizza</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">14.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Italian Pizza</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">14.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -394,9 +428,9 @@ export default function Home() {
               <Image src={image16} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Mild Butter</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Mild Butter</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -404,9 +438,9 @@ export default function Home() {
               <Image src={image17} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Sllice Beef</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Sllice Beef</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -414,9 +448,9 @@ export default function Home() {
               <Image src={image18} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Fresh Bread</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Fresh Bread</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -424,9 +458,9 @@ export default function Home() {
               <Image src={image2} alt="some food" className=" w-[80px] h-[79px] rounded-[6px]" />
             </div>
             <div className="">
-              <h3 className="text-white font-bold text-[20px]">Mushaom Pizza</h3>
-              <p className="font-[inter] text-[14px] text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
-              <p className="font-bold text-[28px] text-[#FF9F0D]">12.5$</p>
+              <h3 className="text-white font-bold lg:text-xl text-sm">Mushaom Pizza</h3>
+              <p className="font-[inter] text-xs lg:text-sm text-[#ffffff]">Lacus nisi, et ac dapibus velit in consequat.</p>
+              <p className="font-bold text-sm lg:text-2xl text-[#FF9F0D]">12.5$</p>
             </div>
           </div>
         </div>
@@ -435,14 +469,14 @@ export default function Home() {
     {/* sixth portion completed menu here */}
 
     {/* seven portion start here meet our chef */}
-    <div className="mt-32">
+    <div className="lg:mt-32 mt-20">
       <div className="">
-        <h4 className="text-[#FF9F0D] font-[helvetica] text-[32px] text-center">Chefs</h4>
-        <h2 className="text-[#FF9F0D] font-[helvetica] font-bold text-[48px] text-center">Me
+        <h4 className="text-[#FF9F0D] font-[helvetica] lg:text-3xl text-xl text-center">Chefs</h4>
+        <h2 className="text-[#FF9F0D] font-[helvetica] font-bold lg:text-5xl text-2xl text-center">Me
           <span className="text-[#FFffff]">et Our Chef</span></h2>
       </div>
       <Image src={image20} alt="fancy leave for backgroun image" className="w-[409px] h-[531px] mt-10"/>
-      <div className="flex justify-center flex-wrap gap-5 -mt-[500px]">
+      <div className="flex justify-center flex-wrap gap-5 -mt-[500px] mx-5">
         <div className="">
           <Image src={image21} alt="chef" className="w-[312px] h-[391px] rounded-[6px]" />
           <div className=" w-[181px] bg-white rounded-bl-md -mt-[51px] relative">
@@ -474,7 +508,7 @@ export default function Home() {
       </div>
       <div className="flex justify-center mt-16">
         <a href="./chef">
-          <button className="border border-[#FF9F0D] rounded-[30px] px-12 py-4 hover:bg-[#FF9F0D] text-[#FF9F0D] font-bold text-[20px] hover:text-white">
+          <button className="border border-[#FF9F0D] rounded-[30px] lg:px-12 px-7 lg:py-4 py-2 hover:bg-[#FF9F0D] text-[#FF9F0D] font-bold lg:text-[20px] text-sm hover:text-white">
             See More
           </button>
         </a>
@@ -483,23 +517,23 @@ export default function Home() {
     {/* seven portion completed meet our chef */}
 
     {/* eight feedback portion started here  */}
-    <div className="lg:mx-32 2xl:mx-72">
+    <div className="lg:mx-32 2xl:mx-72 mx-2">
       <div className="mt-24">
           <p className="lg:text-3xl text-2xl text-[#ff9f0d] text-center lg:text-start">Testimonials</p>
           <h2 className="font-[helvetica] font-bold lg:text-5xl text-3xl text-center lg:text-start text-[#ffffff]">What our client are saying</h2>
       </div>
-      <div className="bg-[#FFFFFF] xl:w-[868px] w-[650px] h-[450px] mx-auto  mt-32">
+      <div className="bg-[#FFFFFF] xl:w-[868px] lg:w-[650px] lg:h-[450px] mx-auto  mt-32">
         <div className="flex justify-end mx-20">
           <Image src={feedbackBackgroundImage} alt="" className="w-[395px] h-[500px]" />
         </div>
-        <div className="mx-auto text-center lg:w-[700px] w-[600px] px-3 -mt-[570px]">
+        <div className="mx-auto text-center lg:w-[700px] md:w-[600px] px-3 -mt-[570px]">
           <div className="flex justify-center">
               <Image src={feedbackImage} alt="" className="lg:w-32 w-28 lg:h-32 h-28"/>
           </div>
           <div className="flex justify-center mt-10">
               <Image src={quotes} alt="" className="lg:w-12 w-10 lg:h-12 h-10" />
           </div>
-          <p className="font-[helvetica] text-lg text-gray-900 mt-10">Lorem ipsum dolor sit amet,
+          <p className="font-[helvetica] lg:text-lg text-sm text-gray-900 mt-10">Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
               Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus.
               Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
@@ -510,8 +544,8 @@ export default function Home() {
               <Image src={star} alt="" className="w-6 h-6"/>
               <Image src={silverStar} alt="" className="w-6 h-6"/>
           </div>
-          <h5 className="font-[helvetica] text-2xl text-gray-950 mt-3">Alamin Hasan</h5>
-          <p className="font-[helvetica] text-base text-gray-700 mt-2">Food Specialist</p>
+          <h5 className="font-[helvetica] lg:text-2xl text-base text-gray-950 mt-3">Alamin Hasan</h5>
+          <p className="font-[helvetica] lg:text-base text-xs text-gray-700 mt-2">Food Specialist</p>
         </div>
       </div>
       <div className="flex justify-center gap-2 mt-24">
@@ -544,15 +578,15 @@ export default function Home() {
     {/* nine portion completed here */}
 
     {/* ten portion (blogs part) start here */}
-    <div className="mt-32">
-      <h4 className="text-[#FF9F0D] text-3xl font-[helvetica] text-center">Blog Post</h4>
-      <h2 className="text-[#FF9F0D] text-5xl font-[helvetica] font-bold text-center mt-4"> La<span className="text-[#ffffff]">test News & Blog</span></h2>
+    <div className="mt-32 mx-5">
+      <h4 className="text-[#FF9F0D] lg:text-3xl text-xl font-[helvetica] text-center">Blog Post</h4>
+      <h2 className="text-[#FF9F0D] lg:text-5xl text-2xl font-[helvetica] font-bold text-center mt-4"> La<span className="text-[#ffffff]">test News & Blog</span></h2>
       <div className="flex justify-center flex-wrap gap-10 mt-14">
         <div className="border border-[#ffffff] w-[425px] pb-4">
           <Image src={image2} alt="food" className="w-[425px] h-[350px] -ml-[1px] -mt-[1px]" />
           <div className="mx-6">
-            <p className="text-[#FF9F0D] mt-4">10 February 2022 </p>
-            <p className="text-[#ffffff] text-[26px] font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
+            <p className="text-[#FF9F0D] mt-4 lg:text-base text-sm">10 February 2022 </p>
+            <p className="text-[#ffffff] lg:text-[26px] text-sm font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
             <div className="flex justify-between mt-4">
               <div className="">
                 <button className="text-[#ffffff] hover:text-[#FF9F0D]">Learn More</button>
@@ -570,8 +604,8 @@ export default function Home() {
         <div className="border border-[#ffffff] w-[425px] pb-4">
           <Image src={pizza} alt="food" className="w-[425px] h-[350px] -ml-[1px] -mt-[1px]" />
           <div className="mx-6">
-            <p className="text-[#FF9F0D] mt-4">10 February 2022 </p>
-            <p className="text-[#ffffff] text-[26px] font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
+            <p className="text-[#FF9F0D] mt-4 lg:text-base text-sm">10 February 2022 </p>
+            <p className="text-[#ffffff] lg:text-[26px] text-sm font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
             <div className="flex justify-between mt-4">
               <div className="">
                 <button className="text-[#ffffff] hover:text-[#FF9F0D]">Learn More</button>
@@ -589,8 +623,8 @@ export default function Home() {
         <div className="border border-[#ffffff] w-[425px] pb-4">
           <Image src={image5} alt="food" className="w-[425px] h-[350px] -ml-[1px] -mt-[1px]" />
           <div className="mx-6">
-            <p className="text-[#FF9F0D] mt-4">10 February 2022 </p>
-            <p className="text-[#ffffff] text-[26px] font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
+            <p className="text-[#FF9F0D] mt-4 lg:text-base text-sm">10 February 2022 </p>
+            <p className="text-[#ffffff] lg:text-[26px] text-sm font-[helvetica]">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</p>
             <div className="flex justify-between mt-4">
               <div className="">
                 <button className="text-[#ffffff] hover:text-[#FF9F0D]">Learn More</button>

@@ -8,7 +8,7 @@ export default function checkout(){
     return(
         <div>
             <Header />
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 sm:mx-3 md:mx-5 lg:mx-10 -mt-80">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 sm:mx-3 md:mx-5 lg:mx-10 ">
                 <div className="lg:col-span-2 md:col-span-1 ml-10">
                     <h6 className="font-[helvetica] font-bold text-black text-2xl pb-5">Shipping Address</h6>
                     <div className="grid lg:grid-cols-2 md:grid-cols-1">

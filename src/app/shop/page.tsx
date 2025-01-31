@@ -21,17 +21,17 @@ export default function shop () {
     return(
         <div className="">
                     <Header />
-                    <div className="2xl:grid grid-cols-3  gap-2 mx-auto -mt-96">
-                        <div className="mx-auto col-span-2">
-                            <div className="grid grid-cols-2">
-                                <div className="w-[332px] h-[46px] font-normal text-xl mt-2 mx-2">
+                    <div className="flex justify-center flex-wrap mx lg:mx-3">
+                        <div className="mx-auto">
+                            <div className="flex justify-evenly">
+                                <div className="w-[px] h-[46px] font-normal text-xl mt-2 mx-2">
                                     sort :
                                 </div>
-                                <div className="w-[332px] h-[46px] font-normal text-xl mt-2 mx-2">
+                                <div className="w-[px] h-[46px] font-normal text-xl mt-2 mx-2">
                                     show :
                                 </div>
                             </div>
-                            <div className="grid md:grid-cols-3 sm:grid-cols-2 m-3 grid-rows-5 gap-10">
+                            <div className="flex justify-center flex-wrap">
                                 <div className="">
                                     <Image src={image41} alt="some food" className="w-[312px] h-[267px]"/>
                                     <p className="w-[126px] h-[36px] font-[inter] text-[20px] font-bold">Fresh Lime</p>
@@ -109,7 +109,7 @@ export default function shop () {
                                 </div>
                             </div>
                             <div className="">
-                                <ul className="2xl:flex justify-center gap-5 m-3 hidden">
+                                <ul className=" gap-5 m-3 hidden">
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">{"<<"}</li>
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">1</li>
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">2</li>
@@ -118,7 +118,7 @@ export default function shop () {
                                 </ul>
                             </div>
                         </div>
-                        <div className="mx-auto h-[1580px] w-96 border-[1px] border-slate-300 rounded-2xl">
+                        <div className="mx-auto h-[1580px] lg:w-96 border-[1px] border-slate-300 rounded-2xl">
                             <div className="">
                                 <input type="input" className="w-[248px] h-[46px] bg-yellow-100 grid mt-7 mx-7" placeholder="Search Product"/>
                                 <div className="relative left-[229px] top-[-46px] w-[46px] h-[46px] bg-[#ff9f0d] grid place-content-center">
@@ -260,7 +260,7 @@ export default function shop () {
                             </div>
                         </div>
                         <div className="">
-                                <ul className="flex justify-center gap-5 m-3 2xl:hidden">
+                                <ul className="flex justify-center lg:gap-5 gap-3 m-3 2xl:hidden">
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">{"<<"}</li>
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">1</li>
                                     <li className="w-[50px] h-[50px] border border-[#ff9f0d] text-xl text-[#ff9f0d] hover:bg-[#ff9f0d] hover:text-white grid place-content-center">2</li>

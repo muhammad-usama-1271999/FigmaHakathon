@@ -36,7 +36,7 @@ export default function blog () {
     return(
         <div className="">
                     <Header />
-                    <div className="xl:flex justify-center xl:-mt-96 sm:mt-[-480px]  sm:mx-auto gap-5">
+                    <div className="xl:flex justify-center sm:mx-auto gap-5">
                         <div className="grid place-content-center mx-10 sm:mt-20 xl:mt-0">
                             <div className="-mt-32">
                                 <div className="relative top-[134px] m-6 p-3 bg-[#ff9f0d] rounded-md w-20 grid place-content-center ">

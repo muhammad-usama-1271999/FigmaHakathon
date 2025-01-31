@@ -10,10 +10,10 @@ export default function Header(){
         <div className="h-screen">
                 <Image src={image30} alt="some food" className="w-[1920px] h-[410px]"/>
                 <div className="absolute inset-x-0 top-0 h-[90px] bg-black flex justify-center items-center">
-                    <div className="w-full h-[32px] mx-28 flex justify-between ">
-                        <div className="w-[109px] h-[32px] text-[#ffffff] font-[helvetica] text-[38px] font-bold ">Food<span className="text-[#FF9F0D]">tuck</span></div>
-                        <div className="col-span-2 w-[508px] h-[32px] ">
-                            <ul className="xl:grid sm:hidden grid-cols-7 place-content-center">
+                    <div className="w-full h-[32px] lg:mx-28 mx-3 flex justify-between ">
+                        <div className="w-[109px] h-[32px] text-[#ffffff] font-[helvetica] text-[38px] font-bold top-0">Food<span className="text-[#FF9F0D]">tuck</span></div>
+                        <div className="hidden lg:grid col-span-2 w-[508px] h-[32px] ">
+                            <ul className="xl:flex hidden gap-5">
                                 <li className="text-[18px] font-[inter] text-[#ffffff] hover:text-[#FF9F0D] "><button><a href="../">Home</a></button></li>
                                 <li className="text-[18px] font-[inter] text-[#ffffff] hover:text-[#FF9F0D]"><button><a href="./menu">Menu</a></button></li>
                                 <li className="text-[18px] font-[inter] text-[#ffffff] hover:text-[#FF9F0D]"><button><a href="./shop">Shop</a></button></li>
@@ -24,12 +24,8 @@ export default function Header(){
                             </ul>
                         </div>
                         <div className=" flex gap-3">
-                            <button className="">
-                                <Image src={searchIcon} alt="searchIcon" className="w-[24px] h-[24px]"/>
-                            </button>
-                            <button className="">
-                            <Image src={userIcon} alt="searchIcon" className="w-[24px] h-[24px]"/>
-                            </button>
+                            <input type="text" className="text-[#ff9f0d] bg-black border border-[#ff9f0d] rounded-full hidden lg:flex" placeholder="  search..." />
+                            
                             <button className="">
                             <a href="./shopping-cart"><Image src={bag} alt="searchIcon" className="w-[24px] h-[24px]"/></a>
                             </button>

@@ -8,7 +8,7 @@ export default function signUp () {
     return(
         <div className="">
                     <Header />
-                    <div className="grid place-content-center mx-auto w-[500px] p-5 -mt-96 my-20 shadow-2xl shadow-yellow-100 ">
+                    <div className="grid place-content-center mx-auto w-[500px] p-5 my-20 shadow-2xl shadow-yellow-100 ">
                         <h5 className="font-[helvetica] font-bold text-xl text-black my-5">Sign Up</h5>
                         <input type="text" className="h-16 border border-slate-200 w-[400px] my-2 text-xl" placeholder="   Name" required/>
                         <input type="email" className="h-16 border border-slate-200 w-[400px] my-2 text-xl" placeholder="   Email" pattern=".+@example\.com" required/>

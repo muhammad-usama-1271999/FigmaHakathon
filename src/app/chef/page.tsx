@@ -18,7 +18,7 @@ export default function chef (){
     return(
         <div>
            <Header />
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-10 -mt-80 ">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-10 ">
             <div className="m-5 grid place-content-center">
                 <Image src={image73} alt="" className="w-[312px] h-[380px]"/>
                 <h6 className="font-[helvetica] font-semibold text-xl text-black flex justify-center p-2">Tahmina Rumi</h6>

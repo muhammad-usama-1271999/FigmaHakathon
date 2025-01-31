@@ -14,7 +14,7 @@ function cart () {
   return (
     <div>
        <Header />
-        <div className="2xl:mx-auto mx-9 grid place-content-center -mt-96">
+        <div className="2xl:mx-auto mx-9 grid place-content-center">
             <div className="grid grid-cols-6 gap-20 lg:gap- ">
                 <h6 className="col-span-2 font-[inter] text-black text-2xl font-bold w-24 ">Product</h6>
                 <h6 className="font-[inter] text-black text-2xl font-bold w-24 ">Price</h6>

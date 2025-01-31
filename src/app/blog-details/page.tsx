@@ -39,7 +39,7 @@ export default function blog () {
     return(
         <div className="">
                     <Header />
-                    <div className="xl:flex xl:justify-center -mt-96 gap-5 mx-24">
+                    <div className="xl:flex xl:justify-center gap-5 mx-24">
                         <div className="xl:ml-24">
                             <div className="">
                                 <Image src={image113} alt="" className="xl:w-[871px] xl:h-[520px] sm:w-[430px] sm:h-[270px] sm:mx-auto xl:mx-0"/>
